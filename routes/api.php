@@ -19,3 +19,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('sync-data', [
     	'as' => 'sync.data', 'uses' => 'SyncController@sync'
 	]);
+Route::post('register',[
+        'uses'  => 'ApiController@register',
+        'as'    => 'register'
+    ]);
